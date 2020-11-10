@@ -18,25 +18,25 @@
 
     <form action="register_db.php">
         <div class="input-group">
-            <CENTER><label for="username"><font size="4">Username</font></label>
+            <label for="username">Username</label>
             <BR><input type="text" name="username"></BR>
         </div>
         <div class="input-group">
-            <CENTER><label for="email"><font size="4">E-mail</font></label>
+            <label for="email">E-mail</label>
             <BR><input type="email" name="email"></BR>
         </div>  
         <div class="input-group">
-            <CENTER><label for="password_1"><font size="4">Password</font></label>
+            <label for="password_1">Password</label>
             <BR><input type="password" name="password_1"></BR>
         </div>
         <div class="input-group">
-            <CENTER><label for="password_2"><font size="4">Confirm Password</font></label>
+            <label for="password_2">Confirm Password</label>
             <BR><input type="password" name="password_2"></BR>
         </div>  
         <div class="input-group">
-            <CENTER><BR><button type="submit" name="reg_user" class="btn"><font size="4">Register</font></button></BR>
+            <BR><button type="submit" name="reg_user" class="btn">Register</button></BR>
         </div>
-            <CENTER><p>Already a member ?<a href="login.php">Sign in</a></p></CENTER>               
+            <p>Already a member ?<a href="login.php">Sign in</a></p>              
     </form>
 
 </body>

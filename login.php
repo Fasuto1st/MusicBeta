@@ -13,22 +13,22 @@
 <body>
 
     <div class="header">
-    <CENTER><h2><font size="6">Login</font></h2></CENTER>
+    <h2>Login</h2>
     </div>
 
     <form action="register_db.php">
         <div class="input-group">
-            <CENTER><label for="username"><font size="4">Username</font></label>
+            <label for="username">Username</label>
             <BR><input type="text" name="username"></BR>
         </div>
         <div class="input-group">
-            <CENTER><label for="password"><font size="4">Password</font></label>
+            <label for="password">Password</label>
             <BR><input type="password" name="password"></BR>
         </div>
         <div class="input-group">
-            <CENTER><BR><button type="submit" name="login_user" class="btn"><font size="4">Login</font></button></BR>
+            <BR><button type="submit" name="login_user" class="btn">Login</button></BR>
         </div>
-            <CENTER><p>Not yet a member?<a href="login.php">Sign up</a></p></CENTER>               
+            <p>Not yet a member?<a href="login.php">Sign up</a></p>             
     </form>
 
 </body>
