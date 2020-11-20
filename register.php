@@ -1,4 +1,7 @@
-<?php include('server.php'); ?>
+<?php 
+    session_start();
+    include('server.php'); 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +51,8 @@ h2 {
     <CENTER><h2><font size="6">Register</font></h2></CENTER>
     </div>
 
-    <form action="register_db.php">
+    <form action="register_db.php" method ="post">
+        <?php include('errors.php'); ?>
         <div class="input-group">
 				<LEFT><label for="username">Username</label>
             <BR><input type="text" name="username"></BR>
@@ -66,7 +70,7 @@ h2 {
             <BR><input type="password" name="password_2"></BR>
         </div>  
         <div class="input-group">
-				<LEFT><BR><button type="submit" name="submit" class="btn btn-danger">Register</button></BR>
+				<LEFT><BR><input type="button" onclick="location.href='login.php';" value="register"class="btn btn-danger" /></BR>
         </div><BR>
 				<CENTER><p>Already a member ?<a href="login.php">Sign in</a></p>              
     </form>
