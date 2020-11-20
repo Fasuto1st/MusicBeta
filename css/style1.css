@@ -1,0 +1,123 @@
+body{
+  background-color: #555555;
+  color:#484848;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#player{
+  display: block;
+  width: 530px;
+  height: 550px;
+  border-radius: 20px;
+  background-color: rgb(199, 194, 194);
+  box-shadow: 0 0 50px #888888;
+  margin:auto;
+  margin-top: 0%;
+}
+
+#song {
+  display:none;
+}
+/* cover img*/
+#cover{
+  height: 33%;
+  background-color: gray;
+  border-radius: 20px 20px 0 0;
+  background: url("https://img.freepik.com/free-vector/sound-wave-display-equalizer-rainbow-color-illustration-about-dynamic-audio-from-electronic-equipment_72857-97.jpg?size=626&ext=jpg");
+  background-size: cover;
+}
+
+
+/* info display*/
+.display{
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10%;
+}
+
+.info{
+  margin-left: 15%;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.info p{
+  font-weight: 300; 
+}
+
+#songTitle{
+  width: 65%;
+  height: 130px;
+}
+
+#toolBar{
+  width: 35%;
+  height: 130px;
+  display: inline-flex;
+}
+
+.tool{
+  color:#3b3b3b;
+  margin:10px;
+}
+
+
+.fa-share-square-o:hover{
+  color: #282828; 
+}
+
+#progressBar{
+  height: 60px;
+  width: 85%;
+  position: relative;
+  left:50%;
+  transform: translateX(-50%);
+  margin-top: 15px;
+}
+
+
+/* control panel*/
+#control{
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+}
+
+
+#pause, #play, #stop{
+  height: 60px;
+  width: 60px;
+  border-radius:50px;
+  background-color: #505050;
+  text-align: center;
+  position: relative;
+  margin:10px;
+}
+
+#backward, #forward{
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  background-color: #505050;
+  position: relative;
+  margin:10px;
+}
+
+#control .fa{
+  position: absolute;
+  color:white;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.heart{
+  color:#FF3366;
+}
+
+.star{
+  color:#FFCC33;
+}
+
+  
