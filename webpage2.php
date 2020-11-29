@@ -1,3 +1,13 @@
+<?php 
+    session_start();
+
+    if (isset($_GET['logout'])) {
+        session_destroy();
+        unset($_SESSION['username']);
+        header('location: login.php');
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,11 +43,25 @@
       <li><a href="#">เกี่ยวกับ</a></li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="เพลง..." aria-label="Search">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>  
+      <li><a href="webpage.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      <?php if (isset($_SESSION['success'])) : ?>
+            <div class="success">
+                <h3>
+                    <?php 
+                        echo $_SESSION['success'];
+                        unset($_SESSION['success']);
+                    ?>
+                </h3>
+            </div>
+        <?php endif ?>
+    
+        <!-- logged in user information -->
+        <?php if (isset($_SESSION['username'])) : ?>
+            <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+        <?php endif ?>   
     </ul>
   </div>
 </nav>
@@ -46,7 +70,7 @@
 </div>
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="forvorite.php">เพลงที่ถูกใจ</a> 
+  <a href="forvorite.php">เพลงที่ถูกใจ</a>
   <a href="Album.php">อัลบั้ม</a>
 </div>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; คอลเลกชัน</span>

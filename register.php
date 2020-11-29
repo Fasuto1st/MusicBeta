@@ -53,6 +53,16 @@ h2 {
 
     <form action="register_db.php" method ="post">
         <?php include('errors.php'); ?>
+        <?php if (isset($_SESSION['error'])) : ?>
+            <div class="error">
+                <h3>
+                    <?php 
+                        echo $_SESSION['error'];
+                        unset($_SESSION['error']);
+                    ?>
+                </h3>
+            </div>
+        <?php endif ?>
         <div class="input-group">
 				<LEFT><label for="username">Username</label>
             <BR><input type="text" name="username"></BR>
@@ -70,7 +80,7 @@ h2 {
             <BR><input type="password" name="password_2"></BR>
         </div>  
         <div class="input-group">
-				<LEFT><BR><input type="button" onclick="location.href='login.php';" value="register"class="btn btn-danger" /></BR>
+				<LEFT><BR><input type="submit" name="reg_user" onclick="location.href='login.php';" value="register"class="btn btn-danger" /></BR>
         </div><BR>
 				<CENTER><p>Already a member ?<a href="login.php">Sign in</a></p>              
     </form>

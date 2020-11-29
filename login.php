@@ -52,6 +52,16 @@ h1 {
     </div>
 
     <form action="login_db.php" method ="post">
+        <?php if (isset($_SESSION['error'])) : ?>
+            <div class="error">
+                <h3>
+                    <?php 
+                        echo $_SESSION['error'];
+                        unset($_SESSION['error']);
+                    ?>
+                </h3>
+            </div>
+        <?php endif ?>
         <div class="input-group">
             <CENTER><label for="username"><font size="4">Username</font></label>
             <BR><input type="text" name="username"></BR>
@@ -61,7 +71,7 @@ h1 {
             <BR><input type="password" name="password"></BR>
         </div>
         <div class="input-group">
-            <LEFT><BR><input type="button" onclick="location.href='webpage.php';" value="login"class="btn btn-danger"> 
+            <LEFT><BR><input type="submit" name="login_user" onclick="location.href='webpage2.php';" value="login"class="btn btn-danger"> 
         </div><BR>
             <CENTER><p>Not yet a member?<a href="register.php">Sign up</a></p></CENTER>               
     </form>
