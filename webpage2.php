@@ -51,8 +51,12 @@ include 'item.php';
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="เพลง..." aria-label="Search"/>
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="webpage.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    <ul class="nav navbar-nav navbar-right"> 
+      <!-- logged in user information -->
+      <?php if (isset($_SESSION['username'])) : ?>
+        <font color="#FFFAF0"><CENTER>Welcome <strong><?php echo $_SESSION['username']; ?></strong></CENTER></font>
+        <?php endif ?>        
+      <RIGHT><a href="webpage.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></RIGHT>
       <?php if (isset($_SESSION['success'])) : ?>
             <div class="success">
                 <h3>
@@ -63,11 +67,7 @@ include 'item.php';
                 </h3>
             </div>
         <?php endif ?>
-    
-        <!-- logged in user information -->
-        <?php if (isset($_SESSION['username'])) : ?>
-            <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-        <?php endif ?>   
+        
     </ul>
     <div id="results"></div>
   </div>

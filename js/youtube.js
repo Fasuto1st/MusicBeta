@@ -14,7 +14,7 @@ $(function() {
        // execute the request
        request.execute(function(response) {
           var results = response.result;
-          $("#results").html("");
+          $("#results").php("");
           $.each(results.items, function(webpage, webpage2, item) {
             $.get("tpl/item.php", function(data) {
                 $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
