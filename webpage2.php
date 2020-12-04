@@ -82,9 +82,14 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 </script>
+<br>
+<CENTER><div class="btn-group" role="group" aria-label="Basic example"></CENTER>
+<CENTER><button type="button" class="btn btn-secondary">Add Queue</button>
+<button type="button" class="btn btn-secondary">Favorite</button></CENTER>
 
+</div>
 
-    <h1> คิวเพลง </h1>
+    <h1> Music Queue </h1>
     <div class="list-group">
     <a href="#" class="list-group-item list-group-item-action list-group-item-info">1.</a>
     </a>
